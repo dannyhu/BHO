@@ -1,0 +1,12 @@
+D:\SVN_Pros\BHO\BHO\bin\Debug\BHO.dll
+D:\SVN_Pros\BHO\BHO\bin\Debug\BHO.pdb
+D:\SVN_Pros\BHO\BHO\bin\Debug\log4net.dll
+D:\SVN_Pros\BHO\BHO\bin\Debug\Newtonsoft.Json.dll
+D:\SVN_Pros\BHO\BHO\bin\Debug\log4net.xml
+D:\SVN_Pros\BHO\BHO\bin\Debug\Newtonsoft.Json.xml
+D:\SVN_Pros\BHO\BHO\obj\Debug\Interop.SHDocVw.dll
+D:\SVN_Pros\BHO\BHO\obj\Debug\BHO.csproj.ResolveComReference.cache
+D:\SVN_Pros\BHO\BHO\obj\Debug\BHO.csproj.CoreCompileInputs.cache
+D:\SVN_Pros\BHO\BHO\obj\Debug\BHO.csproj.CopyComplete
+D:\SVN_Pros\BHO\BHO\obj\Debug\BHO.dll
+D:\SVN_Pros\BHO\BHO\obj\Debug\BHO.pdb
