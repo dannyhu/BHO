@@ -37,9 +37,9 @@ namespace BHO
 
         public int SetSite(object site)
         {
-//#if DEBUG
-//            Debugger.Launch();
-//#endif
+            //#if DEBUG
+            //            Debugger.Launch();
+            //#endif
 
             BizLog4Provider.WebLogger.Info("SetSite ....");
 
@@ -83,7 +83,8 @@ namespace BHO
             if (ourKey == null)
                 ourKey = registryKey.CreateSubKey(guid, true);
 
-            ourKey.SetValue("Alright", 1);
+            ourKey.SetValue("Alright", 1, RegistryValueKind.DWord);
+            ourKey.SetValue("NoExplorer", 1, RegistryValueKind.DWord);
             registryKey.Close();
             ourKey.Close();
         }
