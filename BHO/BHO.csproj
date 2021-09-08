@@ -82,7 +82,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools\gacutil.exe" /u "$(TargetName)"
+	"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools\gacutil.exe" /f /i "$(TargetPath)"
+	"C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe" /unregister /codebase "$(TargetPath)"
+	"C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe" /codebase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

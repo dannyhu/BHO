@@ -37,9 +37,9 @@ namespace BHO
 
         public int SetSite(object site)
         {
-            //#if DEBUG
-            //            Debugger.Launch();
-            //#endif
+//#if DEBUG
+//            Debugger.Launch();
+//#endif
 
             BizLog4Provider.WebLogger.Info("SetSite ....");
 
@@ -83,10 +83,12 @@ namespace BHO
             if (ourKey == null)
                 ourKey = registryKey.CreateSubKey(guid, true);
 
-            ourKey.SetValue("Alright", 1, RegistryValueKind.DWord);
+            //ourKey.SetValue("Alright", 1, RegistryValueKind.DWord);
             ourKey.SetValue("NoExplorer", 1, RegistryValueKind.DWord);
             registryKey.Close();
             ourKey.Close();
+
+            BizLog4Provider.WebLogger.Info("Register BHO Successfully!");
         }
 
         [ComUnregisterFunction]
@@ -97,6 +99,8 @@ namespace BHO
 
             if (registryKey != null)
                 registryKey.DeleteSubKey(guid, false);
+
+            BizLog4Provider.WebLogger.Info("UnRegister BHO Successfully!");
         }
 
 
@@ -130,13 +134,15 @@ namespace BHO
             {
                 document = (HTMLDocument)webBrowser.Document;
 
-                foreach (IHTMLInputElement element in document.getElementsByTagName("INPUT"))
-                {
-                    System.Windows.Forms.MessageBox.Show(element.value);
+                System.Windows.Forms.MessageBox.Show(document.baseUrl);
 
-                    //if (element.type.ToLower() == "password")
-                    //    System.Windows.Forms.MessageBox.Show(element.value);
-                }
+                //foreach (IHTMLInputElement element in document.getElementsByTagName("INPUT"))
+                //{
+                //    System.Windows.Forms.MessageBox.Show(element.value);
+
+                //    //if (element.type.ToLower() == "password")
+                //    //    System.Windows.Forms.MessageBox.Show(element.value);
+                //}
             }
             catch (Exception ex)
             {
